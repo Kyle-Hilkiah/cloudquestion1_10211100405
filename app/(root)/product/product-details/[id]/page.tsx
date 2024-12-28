@@ -13,9 +13,7 @@ interface Params {
 const ProductDetails = async ({ params }: Params) => {
   const { id } = params; // Removed await here
   const singleProduct: Product = await getSignleProduct(id);
-  const relatedProduct: Product[] = await getProductByCategory(
-    singleProduct.category
-  );
+  const relatedProduct: Product[] = await getProductByCategory(singleProduct.category);
 
   const num = Math.round(singleProduct?.rating?.rate);
   const starArray = new Array(num).fill(0);
