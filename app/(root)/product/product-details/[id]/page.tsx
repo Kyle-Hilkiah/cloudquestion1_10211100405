@@ -33,7 +33,7 @@ const ProductDetails = async ({ params }:{ params: { id: string } }) => {
             {/* Rating */}
             <div className="mt-2 flex items-center space-x-2">
               <div className="flex items-center">
-                {starArray.map((star) =>{
+                {starArray.map(() =>{
                   return <StarIcon key={Math.random()* 5000} size={20} fill="yellow" className="text-yellow-600"/>
                 })}
               </div>
