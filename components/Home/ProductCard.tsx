@@ -49,7 +49,7 @@ const ProductCard = ({ product }: Props) => {
             </Link>
             {/* Rating */}
             <div className="flex items-center ">
-                {ratingArry.map((star) => {
+                {ratingArry.map(() => {
                     return <StarIcon key={Math.random() * 1000} size={16} fill="yellow" className="text-yellow-500" />
                 })}
             </div>
