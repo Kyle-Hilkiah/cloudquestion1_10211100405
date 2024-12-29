@@ -6,13 +6,13 @@ import React from 'react';
 import Addtocart from './add-cart';
 import ProductCard from '@/components/Home/ProductCard';
 
-// Define a type that matches what Next.js expects for page components
+// Define PageProps with the correct structure
 interface PageProps {
   params: { id: string };
 }
 
 const ProductDetails = async ({ params }: PageProps) => {
-  const { id } = params;
+  const { id } = params; // No need for 'await' on params
   const singleProduct: Product = await getSignleProduct(id);
   const relatedProduct: Product[] = await getProductByCategory(singleProduct.category);
 
